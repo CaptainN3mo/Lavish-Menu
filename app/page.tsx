@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import { useState, useEffect } from "react"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
@@ -262,6 +263,28 @@ const desserts = [
   },
 ]
 
+const coffees = [
+  { name: "Americano", description: "Classic black coffee with rich flavor.", price: "K4,000.00", category: "Coffee" },
+  { name: "Cappuccino", description: "Espresso with steamed milk and foam.", price: "K5,500.00", category: "Coffee" },
+  { name: "Espresso (single)", description: "Strong and bold single shot.", price: "K4,000.00", category: "Coffee" },
+  { name: "Espresso (double)", description: "Double shot for extra energy.", price: "K5,000.00", category: "Coffee" },
+  { name: "Café Latte", description: "Smooth espresso with steamed milk.", price: "K6,000.00", category: "Coffee" },
+  { name: "African coffee", description: "Milk, honey, ginger, and coffee blend.", price: "K6,000.00", category: "Coffee" },
+  { name: "French press coffee", description: "Richly brewed French press coffee.", price: "K4,000.00", category: "Coffee" },
+  { name: "Macchiato", description: "Espresso topped with a dash of milk foam.", price: "K5,000.00", category: "Coffee" },
+  { name: "Hot chocolate", description: "Creamy and sweet hot chocolate.", price: "K8,000.00", category: "Coffee" },
+  { name: "Hot milk", description: "Steamed hot milk, perfect for relaxing.", price: "K3,500.00", category: "Coffee" },
+];
+
+const teas = [
+  { name: "Indian tea", description: "Traditional Indian spiced tea.", price: "K5,000.00", category: "Tea" },
+  { name: "Black tea", description: "Classic black tea, robust and bold.", price: "K3,000.00", category: "Tea" },
+  { name: "Green tea", description: "Refreshing and healthy green tea.", price: "K3,500.00", category: "Tea" },
+  { name: "Herbal tea", description: "Aromatic blend of herbs and spices.", price: "K7,000.00", category: "Tea" },
+  { name: "African tea", description: "Milk, honey, ginger, and black tea.", price: "K4,500.00", category: "Tea" },
+  { name: "Chai tea", description: "Tea with honey, lemon, and ginger.", price: "K3,500.00", category: "Tea" },
+];
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState("restaurant")
   const [isLoaded, setIsLoaded] = useState(false)
@@ -326,6 +349,8 @@ export default function Home() {
               <MenuSection title="Lake & Sea Food" items={seafood} delay={400} />
               <MenuSection title="Pasta" items={pasta} delay={500} />
               <MenuSection title="Desserts" items={desserts} delay={600} />
+              <MenuSection title="Coffees" items={coffees} delay={700} />
+              <MenuSection title="Teas" items={teas} delay={800} />
             </div>
           )}
         </div>
